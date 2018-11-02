@@ -23,11 +23,11 @@
           <div class="address">郑州市金水区未来路与郑汴路交叉口向东200米</div>
         </div>
         <div class="foot_4">
-          <div class="erweima">
-
+          <div>
+            <img :src="erweimaImg" class="erweima" />
           </div>
           <div class="gongzhonghao">
-
+            &nbsp;&nbsp;紫顺装饰公众号
           </div>
         </div>
     </div>
@@ -35,8 +35,14 @@
 </template>
 
 <script>
+import erweima from '../../assets/image/erweima.jpg'
 export default {
-  name: 'foot'
+  name: 'foot',
+  data () {
+    return {
+      erweimaImg: erweima
+    }
+  }
 }
 </script>
 
@@ -84,6 +90,7 @@ export default {
   .foot_3{
     height: 100%;
     float: left;
+    font-size:14px;
     /*background-color: burlywood;*/
     width: 450px;
     .email{
@@ -102,15 +109,20 @@ export default {
     }
   }
   .foot_4{
+    font-size:14px;
     height: 100%;
     float: right;
-    background-color: aquamarine;
     width: 200px;
     .erweima{
-
+      text-align: center;
+      margin-top: 20px;
+      width: 130px;
+      height: 130px;
     }
     .gongzhonghao{
 
+      margin-top: 5px;
+      width: 150px;
     }
   }
 }
