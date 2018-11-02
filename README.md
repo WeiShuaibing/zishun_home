@@ -26,4 +26,4 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 3. --save-dev 与 --save 的区别
 --save     安装包信息将加入到dependencies（生产阶段的依赖）
 --save-dev 安装包信息将加入到devDependencies（开发阶段的依赖），所以开发阶段一般使用它
-魏帅斌222
+魏帅斌222333666
