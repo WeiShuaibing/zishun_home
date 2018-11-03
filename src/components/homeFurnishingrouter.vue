@@ -1,9 +1,12 @@
+
 <template>
-<div>
-  <title>释放第一个router</title>
+  <div>
+    <title>智能家居</title>
+    我是余多彬2
+    <router-link    to="/homeFurnishingrouter/y1">机器人</router-link>
+    <router-link    to="/homeFurnishingrouter/y2">手机</router-link>
 
-  <router-view></router-view>
-
+    <router-view></router-view>
   </div>
 </template>
 
