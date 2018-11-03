@@ -21,13 +21,14 @@ import RealScene from './components/realScene'
 import SetMeal from './components/setMeal'
 import Village from './components/village'
 import Customized from './components/customized'
+import Detail from './components/detail'
 
 export default {
   name: 'App',
-  components: { Head, Foot, Home, Contact, Case, HomeFurnishing, RealScene, SetMeal, Village, Customized },
+  components: { Head, Foot, Home, Contact, Case, HomeFurnishing, RealScene, SetMeal, Village, Customized, Detail },
   data () {
     return {
-      comp: 'Home'
+      comp: 'Detail'
     }
   },
   methods: {
