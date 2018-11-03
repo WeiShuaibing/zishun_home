@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  name: 'detail' // 详情页面
+  name: 'detail' // 详情页面模板
 }
 </script>
 
