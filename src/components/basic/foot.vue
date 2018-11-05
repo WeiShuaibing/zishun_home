@@ -38,7 +38,7 @@
 import erweima from '../../assets/image/erweima.jpg'
 export default {
   name: 'foot',
-  data () {
+  data  () {
     return {
       erweimaImg: erweima
     }
