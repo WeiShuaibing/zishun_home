@@ -113,7 +113,7 @@
         </div>
       </div>
     </div>
-    <div style="height: 50px;"></div>
+    <div style="height: 80px;"></div>
   </div>
 </template>
 
