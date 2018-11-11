@@ -28,7 +28,7 @@ export default {
   components: { Head, Foot, Home, Contact, Case, HomeFurnishing, RealScene, SetMeal, Village, Customized, Detail },
   data () {
     return {
-      comp: 'Detail'
+      comp: 'home'
     }
   },
   methods: {
