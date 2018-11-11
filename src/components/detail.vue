@@ -16,7 +16,7 @@
   <div class="detail_content">
     <p class="detail_content_instruction">设计说明：</p>
     <div>
-      这是详情内容
+      这是详情内容ss
     </div>
   </div>
 </div>
