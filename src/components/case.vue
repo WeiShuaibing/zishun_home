@@ -8,16 +8,16 @@
         <div class="row1_left">案例户型：</div>
         <div class="row1_right">
           <ul>
-            <li>全部</li>
-            <li>别墅</li>
-            <li>跃层</li>
-            <li>普通住宅</li>
-            <li>工装</li>
-            <li>二居室</li>
-            <li>三居室</li>
-            <li>四居室</li>
-            <li>Loft</li>
-            <li>复式</li>
+            <li v-bind:class="{ active: hourseActive === 1 }"><a class="liSelect" @click="hourseSelect($event,1)">全部</a></li>
+            <li v-bind:class="{ active: hourseActive === 2 }"><a class="liSelect" @click="hourseSelect($event,2)">别墅</a></li>
+            <li v-bind:class="{ active: hourseActive === 3 }"><a class="liSelect" @click="hourseSelect($event,3)">跃层</a></li>
+            <li v-bind:class="{ active: hourseActive === 4 }"><a class="liSelect" @click="hourseSelect($event,4)">普通住宅</a></li>
+            <li v-bind:class="{ active: hourseActive === 5 }"><a class="liSelect" @click="hourseSelect($event,5)">工装</a></li>
+            <li v-bind:class="{ active: hourseActive === 6 }"><a class="liSelect" @click="hourseSelect($event,6)">二居室</a></li>
+            <li v-bind:class="{ active: hourseActive === 7 }"><a class="liSelect" @click="hourseSelect($event,7)">三居室</a></li>
+            <li v-bind:class="{ active: hourseActive === 8 }"><a class="liSelect" @click="hourseSelect($event,8)">四居室</a></li>
+            <li v-bind:class="{ active: hourseActive === 9 }"><a class="liSelect" @click="hourseSelect($event,9)">Loft</a></li>
+            <li v-bind:class="{ active: hourseActive === 10 }"><a class="liSelect" @click="hourseSelect($event,10)">复式</a></li>
           </ul>
         </div>
       </div>
@@ -25,19 +25,19 @@
         <div class="row2_left">装修风格：</div>
         <div class="row2_right">
           <ul>
-            <li>全部</li>
-            <li>现代简约</li>
-            <li>简欧</li>
-            <li>新中式</li>
-            <li>北欧风格</li>
-            <li>简美风格</li>
-            <li>新古典</li>
-            <li>雅致主义</li>
-            <li>美式乡村</li>
-            <li>现代前卫</li>
-            <li>欧式古典</li>
-            <li>地中海风格</li>
-            <li>其他</li>
+            <li v-bind:class="{ active: styleActive === 11 }"><a class="liSelect" @click="styleSelect($event,11)">全部</a></li>
+            <li v-bind:class="{ active: styleActive === 12 }"><a class="liSelect" @click="styleSelect($event,12)">现代简约</a></li>
+            <li v-bind:class="{ active: styleActive === 13 }"><a class="liSelect" @click="styleSelect($event,13)">简欧</a></li>
+            <li v-bind:class="{ active: styleActive === 14 }"><a class="liSelect" @click="styleSelect($event,14)">新中式</a></li>
+            <li v-bind:class="{ active: styleActive === 15 }"><a class="liSelect" @click="styleSelect($event,15)">北欧风格</a></li>
+            <li v-bind:class="{ active: styleActive === 16 }"><a class="liSelect" @click="styleSelect($event,16)">简美风格</a></li>
+            <li v-bind:class="{ active: styleActive === 17 }"><a class="liSelect" @click="styleSelect($event,17)">新古典</a></li>
+            <li v-bind:class="{ active: styleActive === 18 }"><a class="liSelect" @click="styleSelect($event,18)">雅致主义</a></li>
+            <li v-bind:class="{ active: styleActive === 19 }"><a class="liSelect" @click="styleSelect($event,19)">美式乡村</a></li>
+            <li v-bind:class="{ active: styleActive === 20 }"><a class="liSelect" @click="styleSelect($event,20)">现代前卫</a></li>
+            <li v-bind:class="{ active: styleActive === 21 }"><a class="liSelect" @click="styleSelect($event,21)">欧式古典</a></li>
+            <li v-bind:class="{ active: styleActive === 22 }"><a class="liSelect" @click="styleSelect($event,22)">地中海风格</a></li>
+            <li v-bind:class="{ active: styleActive === 23 }"><a class="liSelect" @click="styleSelect($event,23)">其他</a></li>
           </ul>
         </div>
       </div>
@@ -45,20 +45,20 @@
         <div class="row3_left">房屋面积：</div>
         <div class="row3_right">
           <ul>
-            <li>全部</li>
-            <li>80-100平米</li>
-            <li>100-140平米</li>
-            <li>140-200平米</li>
-            <li>200-320平米</li>
-            <li>320-500平米</li>
-            <li>500-1000平米</li>
-            <li>1000平米以上</li>
+            <li v-bind:class="{ active: areaActive === 31 }"><a class="liSelect" @click="areaSelect($event,31)">全部</a></li>
+            <li v-bind:class="{ active: areaActive === 24 }"><a class="liSelect" @click="areaSelect($event,24)">80-100平米</a></li>
+            <li v-bind:class="{ active: areaActive === 25 }"><a class="liSelect" @click="areaSelect($event,25)">100-140平米</a></li>
+            <li v-bind:class="{ active: areaActive === 26 }"><a class="liSelect" @click="areaSelect($event,26)">140-200平米</a></li>
+            <li v-bind:class="{ active: areaActive === 27 }"><a class="liSelect" @click="areaSelect($event,27)">200-320平米</a></li>
+            <li v-bind:class="{ active: areaActive === 28 }"><a class="liSelect" @click="areaSelect($event,28)">320-500平米</a></li>
+            <li v-bind:class="{ active: areaActive === 29 }"><a class="liSelect" @click="areaSelect($event,29)">500-1000平米</a></li>
+            <li v-bind:class="{ active: areaActive === 30 }"><a class="liSelect" @click="areaSelect($event,30)">1000平米以上</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="three">
-      <div class="three_item">
+      <!--<div class="three_item">
         <img :src="imgsrc" alt="点击查看详情" class="item_img"/>
         <div class="item_text">
           <div class="item_text_1">
@@ -68,52 +68,19 @@
             普通住宅 | 北欧风格 | 80-100平米
           </div>
         </div>
-      </div>
-      <div class="three_item">
-        <img :src="imasrc2" alt="点击查看详情" class="item_img"/>
-        <div class="item_text">
-          <div class="item_text_1">
-            泰宏建业国际城130平北欧风格
-          </div>
-          <div class="item_text_2">
-            普通住宅 | 北欧风格 | 80-100平米
-          </div>
-        </div>
-      </div>
-      <div class="three_item">
-        <img :src="imgsrc" alt="点击查看详情" class="item_img"/>
-        <div class="item_text">
-          <div class="item_text_1">
-            泰宏建业国际城130平北欧风格
-          </div>
-          <div class="item_text_2">
-            普通住宅 | 北欧风格 | 80-100平米
-          </div>
-        </div>
-      </div>
-      <div class="three_item">
-        <img :src="imasrc2" alt="点击查看详情" class="item_img"/>
-        <div class="item_text">
-          <div class="item_text_1">
-            泰宏建业国际城130平北欧风格
-          </div>
-          <div class="item_text_2">
-            普通住宅 | 北欧风格 | 80-100平米
-          </div>
-        </div>
-      </div>
-      <div class="three_item">
-        <img :src="imasrc2" alt="点击查看详情" class="item_img"/>
-        <div class="item_text">
-          <div class="item_text_1">
-            泰宏建业国际城130平北欧风格
-          </div>
-          <div class="item_text_2">
-            普通住宅 | 北欧风格 | 80-100平米
-          </div>
-        </div>
-      </div>
+      </div>-->
 
+      <div v-for="item in listData" :key="item.id" class="three_item">
+        <img :src="item | urlFilter" alt="点击查看详情" class="item_img"/>
+        <div class="item_text">
+          <div class="item_text_1">
+           {{item.title}}
+          </div>
+          <div class="item_text_2">
+            {{item.hourse}} | {{item.style}} | {{item.area}}
+          </div>
+        </div>
+      </div>
     </div>
     <!--清除浮动效果-->
     <div style="clear: both;" />
@@ -143,10 +110,25 @@ export default {
   components: { Pagination },
   data () {
     return {
-      imgsrc: 'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1541593284&di=da5fa11a65ac1c6130a3b1b4e66f96ad&src=http://imgsrc.baidu.com/imgad/pic/item/962bd40735fae6cd79fe484604b30f2442a70f4a.jpg',
-      imasrc2: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1541604198502&di=1b59bea4218eb574489549bee923828e&imgtype=0&src=http%3A%2F%2Fpic10.photophoto.cn%2F20090107%2F0033034157010008_b.jpg',
-      pagesize: 12,
-      total: 1000
+      type: {
+        hourse: '全部',
+        style: '全部',
+        area: '全部'
+      },
+      listData: null,
+      baseUrl: 'http://zishun.wei.demo.cn/',
+      pagesize: 12, // 每页条数
+      page: 1, // 当前页码
+      total: 1000,
+      hourseActive: 1,
+      styleActive: 11,
+      areaActive: 31
+    }
+  },
+  filters: {
+    urlFilter (val) {
+      return 'http://zishun.wei.demo.cn/' + val.cover
+      // console.log(val.cover)
     }
   },
   mounted () {
@@ -155,10 +137,21 @@ export default {
   methods: {
     getList () {
       this.$http({
-        url: '/api/admin/case/getCaseList',
-        methods: 'get'
+        url: '/api/home/case/getCaseList',
+        methods: 'get',
+        params: {
+          'page': this.page, // 第一页
+          'limit': this.pagesize, // 每页12条
+          'hourse': this.type.hourse,
+          'style': this.type.style,
+          'area': this.type.area
+        }
       }).then(res => {
+        res = res.data
         console.log(res)
+        //  给文章总数复制
+        this.total = parseInt(res.other)
+        this.listData = res.data
       }).catch(err => {
         console.log(err)
       })
@@ -185,6 +178,22 @@ export default {
       s = s.replace(/&#39;/g, "\\'")
       s = s.replace(/&quot;/g, '"')
       return s
+    },
+    areaSelect (val, index) {
+      this.areaActive = index
+      this.type.area = val.currentTarget.innerHTML
+      this.getList()
+    },
+    hourseSelect (val, index) {
+      this.hourseActive = index
+      console.log(val)
+      this.type.hourse = val.currentTarget.innerHTML
+      this.getList()
+    },
+    styleSelect (val, index) {
+      this.styleActive = index
+      this.type.style = val.currentTarget.innerHTML
+      this.getList()
     }
   }
 }
@@ -332,5 +341,11 @@ export default {
     text-align: center;
   }
 }
-
+.liSelect:hover{
+  cursor:pointer;
+  text-shadow: 0.2em 0.3em 0.2em #4F4F4F;
+}
+.active{
+  color: red;
+}
 </style>
