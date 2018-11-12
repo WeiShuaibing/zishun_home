@@ -116,7 +116,6 @@ export default {
         area: '全部'
       },
       listData: null,
-      imgsrc: 'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1541593284&di=da5fa11a65ac1c6130a3b1b4e66f96ad&src=http://imgsrc.baidu.com/imgad/pic/item/962bd40735fae6cd79fe484604b30f2442a70f4a.jpg',
       baseUrl: 'http://zishun.wei.demo.cn/',
       pagesize: 12, // 每页条数
       page: 1, // 当前页码
