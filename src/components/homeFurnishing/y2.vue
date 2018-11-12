@@ -57,7 +57,11 @@ export default {
     margin: 20px;
   }
   .font-2{
-    margin:6px;
+    /*margin:6px;*/
+    font-size:28px;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+    line-height:40px;
   }
   .font-21{
     color: #999999;

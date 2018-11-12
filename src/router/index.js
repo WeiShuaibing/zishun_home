@@ -11,7 +11,6 @@ export default new Router({
   routes: [
     {
       path: '/',
-
       redirect: '/homeFurnishingrouter/y1'
     },
     {
@@ -33,6 +32,11 @@ export default new Router({
           component: y2
         }
       ]
+    },
+    {
+      path: '/detail',
+      name: 'detail',
+      component: () => import('@/components/detail')
     }
   ]
 })
