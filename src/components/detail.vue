@@ -30,7 +30,6 @@ export default {
       res: []
     }
   },
-
   props: ['id'],
   mounted () {
     this.$http({
@@ -39,7 +38,6 @@ export default {
     }).then(res => {
       this.res = res.data
       console.log(res)
-
     }).catch(err => {
       console.log(err)
     })

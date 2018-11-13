@@ -13,7 +13,7 @@ import y2 from '@/components/homeFurnishing/y2'
 import Head from '@/components/basic/head'
 import Foot from '@/components/basic/foot'
 export default {
-  name: 'homeFurnishing', // 智能家居
+  name: 'homeFurnishing',
   components: {
     Head,
     Foot,

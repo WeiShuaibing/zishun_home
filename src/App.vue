@@ -4,7 +4,7 @@
     <!--<router-view/>-->
     <!--网页最小高度600,，最小宽度1200-->
     <div style="min-width: 1200px;min-height: 600px;">
-      <component :is=" comp " v-on:change="getChildData"></component>
+      <component :is=" comp " v-on:change="getChildData" v-bind:caseStatus="caseStatus"></component>
     </div>
     <Foot></Foot>
   </div>
@@ -28,11 +28,14 @@ export default {
   components: { Head, Foot, Home, Contact, Case, HomeFurnishing, RealScene, SetMeal, Village, Customized, Detail },
   data () {
     return {
-      comp: 'home'
+      comp: 'home',
+      caseStatus: 'true' + new Date()
     }
   },
   methods: {
     getChildData: function (msg) {
+      this.comp = 'SetMeal'
+      console.log(123)
       this.comp = msg
     }
   }

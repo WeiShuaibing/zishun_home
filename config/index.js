@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/', //打包后的文件目录
     proxyTable: {
       '/api': {     //这里是公共部分，在调用接口时后面接不相同的部分，/api就相当于http://192.168.0.199:8926/api这一段
-        target: 'http://zishun.wei.demo.cn/',   //这里写的是访问接口的域名和端口号
+        target: 'http://www.yun520.xyz/',   //这里写的是访问接口的域名和端口号
         changeOrigin: true, // 必须加上这个才能跨域请求
         pathRewrite: {  // 重命名
           '^/api': ''

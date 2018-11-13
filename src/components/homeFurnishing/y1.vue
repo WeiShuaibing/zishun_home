@@ -1,33 +1,41 @@
 <template>
-  <div  class="ybody">
+  <div class="ybody">
 
-    <h3  style="display: block">衣柜</h3>
+    <div style="display: block;width:84px;
+      font-size:26px;
+      font-weight:500;
+      color:rgba(51,51,51,1);
+      line-height:3;
+      width: 1200px;
+      margin: 0 auto;
+    ">
+      衣柜
+    </div>
     <!--底部显示区域-->
-    <div  class="font">
-      <div class="font-1" >
-        <img src="../../../static/image/yf1.jpg"   style="display: block ;width: 350px"
-        />
-        <div  class="font-2">
+    <div class="font">
+      <div class="font-1">
+        <img src="../../../static/image/yf1.jpg" class="list_img"/>
+        <div class="font-2">
           林语溪岸font-1
-          <p  class="font-21">衣帽间|现代简约 </p>
+        </div>
+        <div class="font-21">衣帽间 | 现代简约</div>
+      </div>
+      <div class="font-1">
+        <img src="../../../static/image/yf2.jpg" class="list_img"/>
+        <div class="font-2">
+          林语溪岸font-1
+          <p class="font-21">衣帽间 | 现代简约 </p>
         </div>
       </div>
-      <div class="font-1" >
-        <img src="../../../static/image/yf1.jpg"   style="display: block ;width: 350px"/>
-        <div  class="font-2">
+      <div class="font-1">
+        <img src="../../../static/image/yf1.jpg" class="list_img"/>
+        <div class="font-2">
           林语溪岸font-1
-          <p  class="font-21">衣帽间|现代简约 </p>
+          <p class="font-21">衣帽间 | 现代简约 </p>
         </div>
-      </div><div class="font-1" >
-      <img src="../../../static/image/yf1.jpg"   style="display: block ;width: 350px"
-      />
-      <div  class="font-2">
-        林语溪岸font-1
-        <p  class="font-21">衣帽间|现代简约 </p>
       </div>
     </div>
-    </div>
-
+    <div style="clear:both;height:30px;"></div>
   </div>
 
 </template>
@@ -35,31 +43,56 @@
 
 export default {
   name: 'y1'
-
 }
 
 </script>
 <style scoped>
-  .ybody{
-    margin: 0 auto;
-    width: 1200px;
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  .ybody {
+    /*margin: 0 auto;
+    width: 1200px;*/
     font-size: 16px;
-
   }
-  .font{
-    flex-direction: row;
 
+  .font {
+    /*flex-direction: row;*/
+    width: 1230px;
+    margin: 0 auto;
+    background-color: yellow;
   }
-  .font-1{
-    display:inline-block;
-    width: 350px;
+
+  .font-1 {
+    /*display:inline-block;*/
+    float: left;
+    width: 380px;
     font-size: 10px;
-    margin: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
-  .font-2{
-    margin:6px;
+
+  .font-2 {
+    height: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+    font-family: PingFang-SC-Medium;
+    line-height: 30px;
   }
-  .font-21{
-    color: #999999;
+
+  .font-21 {
+    height: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(153, 153, 153, 1);
+    line-height: 20px;
   }
-</style >
+
+  .list_img {
+    width: 380px;
+    height: 276px;
+  }
+</style>

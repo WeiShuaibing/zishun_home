@@ -13,8 +13,8 @@
             <div class="navigation" @click="changeBody('case')">案例展示</div>
             <div class="navigation" @click="changeBody('realScene')">实景展示</div>
             <div class="navigation"  @click="changeBody('homeFurnishing')"> 智能家居</div>
-            <div class="navigation" @click="changeBody('customized')">全屋定制</div>
-            <div class="navigation" @click="changeBody('village')">施工小区</div>
+            <div class="navigation" @click="changeBody('homeFurnishing')">全屋定制</div>
+            <div class="navigation" @click="changeBody('realScene')">施工小区</div>
             <div class="navigation" @click="changeBody('setMeal')">套餐说明</div>
             <div class="navigation" @click="changeBody('contact')">联系我们</div>
           </div>
@@ -24,6 +24,7 @@
 </template>
 
 <script>
+// import eventVue from
 export default {
   name: 'upHead', // 网页顶部导航
   data () {
@@ -33,6 +34,7 @@ export default {
   },
   methods: {
     changeBody: function (parameter) {
+      console.log(parameter)
       this.$emit('change', parameter)
     }
   }
@@ -71,9 +73,13 @@ export default {
       height: 45px;
       display: flex;
       .navigation{
+        cursor:pointer;
         text-align: center;
         flex: 1;
         line-height: 45px;
+      }
+      .navigation:hover{
+        background-color: #7e61ef - 20;
       }
     }
   }

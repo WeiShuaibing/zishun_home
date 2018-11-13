@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <div v-if="statues" >
+    <div v-if="!statues" >
     <div class="one">
       首页 > 案例展示
     </div>
@@ -111,11 +111,11 @@ import 'element-ui/lib/theme-chalk/index.css'
 import detail from '@/components/detail'
 export default {
   name: 'case', // 案例展示
-
-  components: { Pagination, detail},
+  components: { Pagination, detail },
+  props: ['caseStatus'],
   data () {
     return {
-      statues: true,
+      statues: false,
       props: ['changeBody'],
       type: {
         hourse: '全部',
@@ -133,9 +133,13 @@ export default {
       areaActive: 31
     }
   },
+  watch: {
+    caseStatus () {
+    }
+  },
   filters: {
     urlFilter (val) {
-      return 'http://zishun.wei.demo.cn/' + val.cover
+      return 'http://www.yun520.xyz/' + val.cover
     }
   },
   mounted () {
@@ -332,6 +336,8 @@ export default {
         transform: scale(1.1);
       }
       .item_text{
+        width: 282px;
+        height: 60px;
         box-shadow:0px 2px 6px 0px rgba(171,171,171,0.2);
         .item_text_1{
           font-size: 14px;

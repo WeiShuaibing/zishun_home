@@ -51,7 +51,7 @@ export default {
   },
   filters: {
     urlFilter (val) {
-      return 'http://zishun.wei.demo.cn/' + val
+      return 'http://www.yun520.xyz/' + val
       // console.log(val)
     }
   },
