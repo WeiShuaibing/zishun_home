@@ -70,8 +70,10 @@
         </div>
       </div>-->
 
-      <div v-for="item in listData" :key="item.id" class="three_item">
-        <img :src="item | urlFilter" alt="点击查看详情" class="item_img"/>
+      <div v-for="item in listData" :key="item.id" class="three_item" @click="toDetail(item.id)">
+        <div class="item_img_out">
+          <img :src="item | urlFilter" class="item_img"/>
+        </div>
         <div class="item_text">
           <div class="item_text_1">
            {{item.title}}
@@ -86,17 +88,13 @@
     <div style="clear: both;" />
     <div class="changepage">
       <div style="margin-top: 25px;">
-        <pagination
-          background
-          layout="prev, pager, next"
+        <Pagination
+          :current-page="1"
           :page-size="pagesize"
-          :total='total'
-          @size-change="sizechange"
-          @current-change="currentchange"
-          @prev-click="prevclick"
-          @next-click="nextclick"
-        >
-        </pagination>
+          :total="totalNum"
+          background
+          layout="total, prev, pager, next, jumper"
+          @current-change="handleCurrentChange"/>
       </div>
     </div>
   </div>
@@ -119,7 +117,7 @@ export default {
       baseUrl: 'http://zishun.wei.demo.cn/',
       pagesize: 12, // 每页条数
       page: 1, // 当前页码
-      total: 1000,
+      totalNum: 0,
       hourseActive: 1,
       styleActive: 11,
       areaActive: 31
@@ -128,7 +126,6 @@ export default {
   filters: {
     urlFilter (val) {
       return 'http://zishun.wei.demo.cn/' + val.cover
-      // console.log(val.cover)
     }
   },
   mounted () {
@@ -150,23 +147,15 @@ export default {
         res = res.data
         console.log(res)
         //  给文章总数复制
-        this.total = parseInt(res.other)
+        this.totalNum = parseInt(res.other)
         this.listData = res.data
       }).catch(err => {
         console.log(err)
       })
     },
-    sizechange (val) {
-      console.log('每页条数' + val)
-    },
-    prevclick (val) {
-      console.log('前一页：' + val)
-    },
-    nextclick (val) {
-      console.log('下一页' + val)
-    },
-    currentchange (val) {
-      console.log('当前页' + val)
+    handleCurrentChange (val) {
+      this.page = val
+      this.getList()
     },
     htmlDecodeByRegExp (str) {
       var s = ''
@@ -194,6 +183,10 @@ export default {
       this.styleActive = index
       this.type.style = val.currentTarget.innerHTML
       this.getList()
+    },
+    toDetail (id) {
+      console.log(id)
+      this.$router.push('/detail')
     }
   }
 }
@@ -305,11 +298,23 @@ export default {
       float: left;
       margin-left: 12px;
       margin-right: 12px;
+      /*background-color: #8cc5ff;*/
+      .item_img_out{
+        /*display: block;*/
+        /*outline: none;*/
+        /*position: relative;*/
+        /*background-size: cover;*/
+        /*background: no-repeat;*/
+        background-image: url("../assets/image/default.jpg");
+        width: 282px;
+        height: 240px;
+        padding-bottom: 3px;
+      }
       .item_img{
         cursor: pointer;
         transition: all 0.6s;
-        width: 282px;
-        height: 240px;
+        width: 100%;
+        height: 100%;
       }
       .item_img:hover{
         transform: scale(1.1);
