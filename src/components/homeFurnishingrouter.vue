@@ -27,12 +27,7 @@ import Foot from '@/components/basic/foot'
 
 export default {
   name: 'homeFurnishing', // 智能家居
-  components: {
-    Head,
-    Foot,
-    y2,
-    y1
-  }
+
 }
 </script>
 

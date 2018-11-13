@@ -12,7 +12,7 @@
             <div class="navigation" @click="changeBody('home')">首页</div>
             <div class="navigation" @click="changeBody('case')">案例展示</div>
             <div class="navigation" @click="changeBody('realScene')">实景展示</div>
-            <div class="navigation" @click="changeBody('homeFurnishing')">智能家居</div>
+            <div class="navigation"  @click="changeBody('homeFurnishing')"> 智能家居</div>
             <div class="navigation" @click="changeBody('customized')">全屋定制</div>
             <div class="navigation" @click="changeBody('village')">施工小区</div>
             <div class="navigation" @click="changeBody('setMeal')">套餐说明</div>

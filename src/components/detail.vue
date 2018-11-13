@@ -24,7 +24,27 @@
 
 <script>
 export default {
-  name: 'detail' // 详情页面模板
+  name: 'detail', // 详情页面模板
+  data () {
+    return {
+      res: []
+    }
+  },
+
+  props: ['id'],
+  mounted () {
+    this.$http({
+      url: '/api/home/case/getCaseList?&id=' + this.id,
+      methods: 'get'
+    }).then(res => {
+      this.res = res.data
+      console.log(res)
+
+    }).catch(err => {
+      console.log(err)
+    })
+  }
+  // 获得返回值
 }
 </script>
 

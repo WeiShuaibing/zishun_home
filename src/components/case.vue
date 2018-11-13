@@ -1,5 +1,6 @@
 <template>
   <div class="main">
+    <div v-if="statues" >
     <div class="one">
       首页 > 案例展示
     </div>
@@ -97,22 +98,31 @@
           @current-change="handleCurrentChange"/>
       </div>
     </div>
+
   </div>
+    <div v-else> <detail  :id="id"></detail> </div>
+  </div>
+
 </template>
 
 <script>
 import { Pagination } from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import detail from '@/components/detail'
 export default {
   name: 'case', // 案例展示
-  components: { Pagination },
+
+  components: { Pagination, detail},
   data () {
     return {
+      statues: true,
+      props: ['changeBody'],
       type: {
         hourse: '全部',
         style: '全部',
         area: '全部'
       },
+      id: 1,
       listData: null,
       baseUrl: 'http://zishun.wei.demo.cn/',
       pagesize: 12, // 每页条数
@@ -132,6 +142,7 @@ export default {
     this.getList()
   },
   methods: {
+
     getList () {
       this.$http({
         url: '/api/home/case/getCaseList',
@@ -186,7 +197,8 @@ export default {
     },
     toDetail (id) {
       console.log(id)
-      this.$router.push('/detail')
+      this.id = id
+      this.statues = !this.statues
     }
   }
 }

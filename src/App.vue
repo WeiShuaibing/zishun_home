@@ -4,7 +4,7 @@
     <!--<router-view/>-->
     <!--网页最小高度600,，最小宽度1200-->
     <div style="min-width: 1200px;min-height: 600px;">
-      <component :is=" comp "></component>
+      <component :is=" comp " v-on:change="getChildData"></component>
     </div>
     <Foot></Foot>
   </div>
