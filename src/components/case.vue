@@ -135,6 +135,7 @@ export default {
   },
   watch: {
     caseStatus () {
+      this.statues = false
     }
   },
   filters: {

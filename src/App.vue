@@ -29,13 +29,12 @@ export default {
   data () {
     return {
       comp: 'home',
-      caseStatus: 'true' + new Date()
+      caseStatus: true
     }
   },
   methods: {
     getChildData: function (msg) {
-      this.comp = 'SetMeal'
-      console.log(123)
+      this.caseStatus = !this.caseStatus
       this.comp = msg
     }
   }
