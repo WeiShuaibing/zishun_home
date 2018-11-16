@@ -1,5 +1,5 @@
 <template>
-    <div class="head">
+    <div class="head" style="min-width: 1200px;">
         <div class="up">
           <div class="name">紫顺装饰</div>
           <div class="phone">
@@ -71,11 +71,21 @@ export default {
       margin: 0 auto;
       width: 1200px;
       height: 45px;
+
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
+
       .navigation{
         cursor:pointer;
         text-align: center;
+
+        -webkit-box-flex: 1;
+        -webkit-flex: 1;
+        -ms-flex: 1;
         flex: 1;
+
         line-height: 45px;
       }
       .navigation:hover{

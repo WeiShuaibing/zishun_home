@@ -4,9 +4,9 @@
     <!--<router-view/>-->
     <!--网页最小高度600,，最小宽度1200-->
     <div style="min-width: 1200px;min-height: 600px;">
-      <component :is=" comp " v-on:change="getChildData" v-bind:caseStatus="caseStatus"></component>
+      <component :is=" comp "  v-bind:caseStatus="caseStatus"></component>
     </div>
-    <Foot></Foot>
+    <Foot  v-on:change="getChildData2" ></Foot>
   </div>
 </template>
 <script>
@@ -35,6 +35,9 @@ export default {
   methods: {
     getChildData: function (msg) {
       this.caseStatus = !this.caseStatus
+      this.comp = msg
+    },
+    getChildData2: function (msg) {
       this.comp = msg
     }
   }

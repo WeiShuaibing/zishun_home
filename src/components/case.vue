@@ -140,7 +140,8 @@ export default {
   },
   filters: {
     urlFilter (val) {
-      return 'http://www.yun520.xyz/' + val.cover
+      var BASE_URL = process.env.BASE_API
+      return BASE_URL + val.cover
     }
   },
   mounted () {
@@ -150,7 +151,8 @@ export default {
 
     getList () {
       this.$http({
-        url: '/api/home/case/getCaseList',
+        url: 'http://api.yun520.xyz/home/case/getCaseList',
+        // url: 'http://zishun.wei.demo.cn/home/case/getCaseList',
         methods: 'get',
         params: {
           'page': this.page, // 第一页

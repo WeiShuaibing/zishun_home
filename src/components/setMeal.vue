@@ -1,7 +1,7 @@
 <template>
 <div class="main">
   <div class="face">
-    <img :src="img.taocanFace" class="face_img" />
+    <!--<img :src="img.taocanFace" class="face_img" />-->
   </div>
   <div class="jingzhuang">
     <div class="jingzhuang_text">八大空间全包精装</div>
@@ -61,12 +61,22 @@ export default {
   font-size: 16px;
   margin: 0 auto;
   .face{
-    width: 1920px;
+    /*width: 1920px;*/
+    /*margin: 0 auto;*/
+    /*.face_img{*/
+      /*width: 1920px;*/
+      /*height: 650px;*/
+    /*}*/
+    width: 100%;
+    height: 650px;
     margin: 0 auto;
-    .face_img{
-      width: 1920px;
-      height: 650px;
-    }
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: block;
+    outline: none;
+    position: relative;
+    background-size: cover;
+    background-image: url("../assets/image/taocan_face.png");
   }
   .jingzhuang{
     width: 1200px;

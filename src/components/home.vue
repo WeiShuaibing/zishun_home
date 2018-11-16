@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <div class="face">
-      <img :src="img.imgface" class="face_img" />
+      <!--<img :src="img.imgface" class="face_img" />-->
     </div>
     <div class="advantage">
       <div class="advantage_text">我们的优势</div>
@@ -155,13 +155,21 @@ export default {
   font-family: -apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
   font-size: 16px;
   margin: 0 auto;
-  .face{
-    width: 1920px;
+  .face {
+    /*width: 1920px;*/
+    width: 100%;
+    height: 860px;
     margin: 0 auto;
-    .face_img{
-      width: 1920px;
-      height: 860px;
-    }
+    /*.face_img{*/
+    /*width: 1920px;*/
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: block;
+    outline: none;
+    position: relative;
+    background-size: cover;
+    background-image: url("../assets/image/face.png");
+    /*}*/
   }
   .advantage{
     width: 1200px;

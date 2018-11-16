@@ -46,7 +46,7 @@ export default {
   outline: none;
   position: relative;
   background-size: cover;
-  background-image: url("../assets/image/contentHead.jpg");
+  background-image: url("../../static/image/contentHead.jpg");
 }
 .main_body{
   width: 1200px;
@@ -65,7 +65,7 @@ export default {
     width: 580px;
     height: 253px;
     /*background-color: #7e61ef;*/
-    background-image: url("../assets/image/content_right.png");
+    background-image: url("../../static/image/content_right.png");
   }
 }
 </style>

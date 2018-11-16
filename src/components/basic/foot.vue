@@ -1,26 +1,26 @@
 <template>
-  <div class="allFoot">
+  <div class="allFoot" style="min-width: 1200px;">
     <div class="footCenter">
         <div class="foot_1">
           <ul>
-            <li>网站首页</li>
-            <li>关于我们</li>
-            <li>案例展示</li>
-            <li>案例展示</li>
+            <li @click="changeBody('home')">网站首页</li>
+            <li @click="changeBody('contact')">关于我们</li>
+            <li @click="changeBody('case')">案例展示</li>
+            <li @click="changeBody('realScene')">实景展示</li>
           </ul>
         </div>
         <div class="foot_2">
           <ul>
-            <li>智能家居</li>
-            <li>全屋定制</li>
-            <li>施工小区</li>
-            <li>套餐说明</li>
+            <li @click="changeBody('homeFurnishing')">智能家居</li>
+            <li @click="changeBody('homeFurnishing')">全屋定制</li>
+            <li @click="changeBody('realScene')">施工小区</li>
+            <li @click="changeBody('setMeal')">套餐说明</li>
           </ul>
         </div>
         <div class="foot_3">
           <div class="email">邮箱：123456789@qq.com</div>
           <div class="phone">联系电话：<span class="phoneText">&nbsp;0371-12345678 &nbsp;&nbsp; 123456789</span></div>
-          <div class="address">郑州市金水区未来路与郑汴路交叉口向东200米</div>
+          <div class="address">郑州高新区中原广告产业园1号楼7楼</div>
         </div>
         <div class="foot_4">
           <div>
@@ -40,7 +40,14 @@ export default {
   name: 'foot',
   data  () {
     return {
+      props: ['getChildData2'],
       erweimaImg: erweima
+    }
+  },
+  methods: {
+    changeBody: function (para) {
+      console.log(para)
+      this.$emit('change', para)
     }
   }
 }
@@ -68,15 +75,17 @@ export default {
       li{
         line-height: 2.5;
         font-size: 14px;
-        /*text-align: center;*/
+        cursor:pointer;
+        text-align: center;
       }
     }
   }
   .foot_2{
     float:left;
     /*background-color: green;*/
-    width: 230px;
+    width: 150px;
     height: 100%;
+    margin-right: 80px;
     ul{
       margin-top: 20px;
       list-style: none;
@@ -84,6 +93,8 @@ export default {
         line-height: 2.5;
         font-size: 14px;
         /*text-align: center;*/
+        cursor:pointer;
+
       }
     }
   }

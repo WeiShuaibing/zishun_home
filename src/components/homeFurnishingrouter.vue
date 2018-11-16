@@ -15,7 +15,7 @@
         厨柜子</span>
         </div>
       </router-link>
-      <img src="../../static/image/yq2.png" style="display: block ;width: 1200px"/>
+      <img src="../assets/image/yq2.png" style="display: block ;width: 1200px"/>
     </div>
     <transition mode="out-in">
       <router-view></router-view>
@@ -26,11 +26,6 @@
 </template>
 
 <script>
-import y1 from '@/components/homeFurnishing/y1'
-import y2 from '@/components/homeFurnishing/y2'
-import Head from '@/components/basic/head'
-import Foot from '@/components/basic/foot'
-
 export default {
   name: 'homeFurnishing' // 智能家居
 
@@ -55,7 +50,7 @@ export default {
       width: 60px;
       height: 60px;
 
-      background-image: url(../../static/image/yh-h1.jpg);
+      background-image: url('../assets/image/yh-h1.jpg');
       background-repeat: no-repeat;
       background-size: 100% 100%;
       -moz-background-size: 100% 100%;
