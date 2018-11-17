@@ -100,7 +100,9 @@
     </div>
 
   </div>
-    <div v-else> <detail  :id="id"></detail> </div>
+    <div v-else>
+      <detail  :id="detailId"></detail>
+    </div>
   </div>
 
 </template>
@@ -130,13 +132,19 @@ export default {
       totalNum: 0,
       hourseActive: 1,
       styleActive: 11,
-      areaActive: 31
+      areaActive: 31,
+      detailId: -1 // 初值-1不加载文章信息，当不等于-1时加载文章信息
     }
   },
   watch: {
     caseStatus () {
       this.statues = false
     }
+    // detailId (val, oldVal) {
+    //   if (this.detailId !== -1) {
+    //     this.getDetail(val)
+    //   }
+    // }
   },
   filters: {
     urlFilter (val) {
@@ -148,7 +156,6 @@ export default {
     this.getList()
   },
   methods: {
-
     getList () {
       this.$http({
         url: 'http://api.yun520.xyz/home/case/getCaseList',
@@ -175,17 +182,7 @@ export default {
       this.page = val
       this.getList()
     },
-    htmlDecodeByRegExp (str) {
-      var s = ''
-      if (str.length === 0) return ''
-      s = str.replace(/&amp;/g, '&')
-      s = s.replace(/&lt;/g, '<')
-      s = s.replace(/&gt;/g, '>')
-      s = s.replace(/&nbsp;/g, ' ')
-      s = s.replace(/&#39;/g, "\\'")
-      s = s.replace(/&quot;/g, '"')
-      return s
-    },
+
     areaSelect (val, index) {
       this.areaActive = index
       this.type.area = val.currentTarget.innerHTML
@@ -203,8 +200,7 @@ export default {
       this.getList()
     },
     toDetail (id) {
-      console.log(id)
-      this.id = id
+      this.detailId = id
       this.statues = !this.statues
     }
   }

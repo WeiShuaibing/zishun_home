@@ -4,19 +4,18 @@
     首页 > 案例展示 > 详情
   </div>
   <div class="detail_title">
-    <h1>保利心语2期110平北欧风格</h1>
+    <h1>{{det.title}}</h1>
   </div>
   <div class="detail_style">
-    <div class="detail_style_item">小区名称：保利心语2期</div>
-    <div class="detail_style_item">风格：北欧</div>
-    <div class="detail_style_item">户型：二室三厅</div>
-    <div class="detail_style_item">设计师：刘培与</div>
-    <div class="detail_style_item">面积：110平米</div>
+    <div class="detail_style_item">小区名称：{{det.village}}</div>
+    <div class="detail_style_item">风格：{{det.style}}</div>
+    <div class="detail_style_item">户型：{{det.hourse}}</div>
+    <div class="detail_style_item">设计师：{{det.designer}}</div>
+    <div class="detail_style_item">面积：{{det.area}}</div>
   </div>
   <div class="detail_content">
     <p class="detail_content_instruction">设计说明：</p>
-    <div>
-      这是详情内容ss
+    <div v-html="det.content">
     </div>
   </div>
 </div>
@@ -27,22 +26,44 @@ export default {
   name: 'detail', // 详情页面模板
   data () {
     return {
-      res: []
+      det: {
+        title: '',
+        village: '',
+        style: '',
+        hourse: '',
+        designer: '',
+        area: '',
+        content: ''
+      }
     }
   },
   props: ['id'],
   mounted () {
     this.$http({
-      url: '/api/home/case/getCaseList?&id=' + this.id,
+      url: 'http://api.yun520.xyz/home/case/getCaseById?&id=' + this.id,
       methods: 'get'
     }).then(res => {
-      this.res = res.data
-      console.log(res)
+      res.data.data.content = this.htmlDecodeByRegExp(res.data.data.content)
+      this.det = res.data.data
+      console.log(this.det.content)
     }).catch(err => {
       console.log(err)
     })
+  },
+  methods: {
+    htmlDecodeByRegExp (str) {
+      var s = ''
+      if (str.length === 0) return ''
+      s = str.replace(/&amp;/g, '&')
+      s = s.replace(/&lt;/g, '<')
+      s = s.replace(/&gt;/g, '>')
+      s = s.replace(/&nbsp;/g, ' ')
+      s = s.replace(/&#39;/g, "\\'")
+      s = s.replace(/&quot;/g, '"')
+      return s
+    }
   }
-  // 获得返回值
+
 }
 </script>
 
@@ -61,6 +82,7 @@ export default {
   font-size: 14px;
 }
 .detail_title{
+  height: 64px;
   text-align: center;
   line-height: 2;
 }
