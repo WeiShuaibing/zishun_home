@@ -10,7 +10,7 @@
       <div style="font-size: 14px;text-align: left;color: #666666;line-height: 2;">
         如有任何问题请联系我们！我们7*24小时阶乘为您服务<br/>
         电话： 020-123456789 邮箱：123411@qq.com<br/>
-        地址：xx省xxx市164号
+        地址：郑州高新区中原广告产业园1号楼7楼
       </div>
       <div style="color: rgb(209, 209, 209);font-size: 20px;">————————————————</div>
     </div>

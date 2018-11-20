@@ -126,7 +126,7 @@ export default {
       },
       id: 1,
       listData: null,
-      baseUrl: 'http://zishun.wei.demo.cn/',
+      baseUrl: 'http://localhost/',
       pagesize: 12, // 每页条数
       page: 1, // 当前页码
       totalNum: 0,
@@ -158,7 +158,7 @@ export default {
   methods: {
     getList () {
       this.$http({
-        url: 'http://api.yun520.xyz/home/case/getCaseList',
+        url: 'http://www.yun520.xyz/home/case/getCaseList',
         // url: 'http://zishun.wei.demo.cn/home/case/getCaseList',
         methods: 'get',
         params: {

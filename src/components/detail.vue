@@ -13,11 +13,13 @@
     <div class="detail_style_item">设计师：{{det.designer}}</div>
     <div class="detail_style_item">面积：{{det.area}}</div>
   </div>
+  <div style="clear: both;"></div>
   <div class="detail_content">
     <p class="detail_content_instruction">设计说明：</p>
     <div v-html="det.content">
     </div>
   </div>
+
 </div>
 </template>
 
@@ -40,7 +42,7 @@ export default {
   props: ['id'],
   mounted () {
     this.$http({
-      url: 'http://api.yun520.xyz/home/case/getCaseById?&id=' + this.id,
+      url: 'http://www.yun520.xyz/home/case/getCaseById?&id=' + this.id,
       methods: 'get'
     }).then(res => {
       res.data.data.content = this.htmlDecodeByRegExp(res.data.data.content)
@@ -72,7 +74,6 @@ export default {
   width: 1200px;
   margin: 0 auto;
   /*border: 1px solid red;*/
-  height: 650px;
   font-size: 16px;
 }
 .detail_location{
@@ -97,6 +98,7 @@ export default {
   }
 }
 .detail_content{
+  margin-bottom: 60px;
   .detail_content_instruction{
     line-height: 3;
     padding-left: 10px;
