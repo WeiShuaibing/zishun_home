@@ -1,7 +1,6 @@
 <template>
 <div>
   <title>释放第一个router</title>
-
   <router-view></router-view>
 
   </div>

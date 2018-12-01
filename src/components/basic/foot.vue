@@ -18,8 +18,8 @@
           </ul>
         </div>
         <div class="foot_3">
-          <div class="email">邮箱：123456789@qq.com</div>
-          <div class="phone">联系电话：<span class="phoneText">&nbsp;0371-12345678 &nbsp;&nbsp; 123456789</span></div>
+          <div class="email">邮箱：382600559@qq.com</div>
+          <div class="phone">联系电话：<span class="phoneText">&nbsp;15286803280</span></div>
           <div class="address">郑州高新区中原广告产业园1号楼7楼</div>
         </div>
         <div class="foot_4">

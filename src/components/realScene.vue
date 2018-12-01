@@ -1,7 +1,7 @@
 <template>
 <div>
   <div class="one">
-    <span>首页 > 案例展示</span>
+    <span>首页 > 实景展示</span>
   </div>
   <div  class="ybody">
     <ul>
