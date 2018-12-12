@@ -158,7 +158,7 @@ export default {
   methods: {
     getList () {
       this.$http({
-        url: 'http://www.yun520.xyz/home/case/getCaseList',
+        url: 'http://www.chinazishun.com/home/case/getCaseList',
         // url: 'http://zishun.wei.demo.cn/home/case/getCaseList',
         methods: 'get',
         params: {

@@ -42,7 +42,7 @@ export default {
   props: ['id'],
   mounted () {
     this.$http({
-      url: 'http://www.yun520.xyz/home/case/getCaseById?&id=' + this.id,
+      url: 'http://www.chinazishun.com/home/case/getCaseById?&id=' + this.id,
       methods: 'get'
     }).then(res => {
       res.data.data.content = this.htmlDecodeByRegExp(res.data.data.content)

@@ -51,7 +51,7 @@ export default {
   },
   filters: {
     urlFilter (val) {
-      return 'http://www.yun520.xyz/' + val
+      return 'http://www.chinazishun.com/' + val
       // console.log(val)
     }
   },
@@ -64,7 +64,7 @@ export default {
     },
     getList () {
       this.$http({
-        url: 'http://www.yun520.xyz/home/scence/getScenceList',
+        url: 'http://www.chinazishun.com/home/scence/getScenceList',
         methods: 'get',
         params: {
           'page': this.page, // 第一页
