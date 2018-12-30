@@ -17,7 +17,7 @@
       </router-link>
       <img src="../assets/image/yq2.png" style="display: block ;width: 1200px"/>
     </div>
-    <transition mode="out-in">
+    <transition  name="slide-fade">
       <router-view></router-view>
     </transition>
 
